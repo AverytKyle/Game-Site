@@ -1,0 +1,67 @@
+.ttt-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.ttt-board {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    gap: 10px;
+    background-color: rgb(72, 76, 80);
+    padding: 10px;
+}
+
+.ttt-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(10, 10, 10);
+    /* border: 1px solid #b12323; */
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.ttt-reset-container {
+    margin-top: 20px;
+}
+
+.ttt-score-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    width: 300px;
+}
+
+.ttt-winner-container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.ttt-reset-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.ttt-reset-button, .ttt-reset-score {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #494747;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ttt-reset-button:hover, .ttt-reset-score:hover {
+    background-color: #443d83;
+}
