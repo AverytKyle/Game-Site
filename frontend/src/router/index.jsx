@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../components/HomePage/HomePage.jsx";
 import TicTacToe from "../components/TicTacToe/TicTacToe.jsx";
-import Snake from "../components/Snake/Snake.jsx";
+import SnakeGame from "../components/Snake/SnakeGame.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -14,6 +14,6 @@ export const router = createBrowserRouter([
     },
     {
         path: "/snake",
-        element: <Snake />,
+        element: <SnakeGame />,
     }
 ]);

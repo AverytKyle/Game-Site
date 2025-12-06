@@ -1,0 +1,35 @@
+.snake-board {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  background-color: #1b1a1a;
+  border: 2px solid #707070;
+  margin: 20px auto;
+}
+
+.snake-game-info {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.snake-game-info h2 {
+  font-size: 34px;
+}
+
+.snake-game-restart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.snake-game-restart-container button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
