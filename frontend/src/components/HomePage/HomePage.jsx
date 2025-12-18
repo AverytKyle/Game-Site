@@ -15,6 +15,11 @@ function HomePage() {
             title: "Snake",
             path: "/snake",
         },
+        {
+            id: 3,
+            title: "Checkers",
+            path: "/checkers",
+        },
     ];
 
     const handleGameClick = (id) => {
