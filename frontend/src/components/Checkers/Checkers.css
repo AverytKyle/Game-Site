@@ -5,6 +5,7 @@
 }
 
 .checkers-game-board {
+    position: relative;
     display: grid;
     width: 800px;
     height: 800px;
@@ -15,32 +16,42 @@
     /* gap: 2px; */
 }
 
-/* .checkers-cell {
+.cell.dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
     width: 100px;
     height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: #973232 1px solid;
-    cursor: pointer;
-} */
-
-.cell.dark {
-    background-color: #0c0c0c;
-    width: auto;
-    height: auto;
 }
 
 .cell.light {
     background-color: #a57529;
-    width: 100%;
-    height: 100%;
+    width: 100px;
+    height: 100px;
 }
 
 .checkers-piece {
+    margin-left: -35px;
+    margin-top: -35px;
+}
+
+.checkers-piece.red {
     width: 70px;
     height: 70px;
     border-radius: 50%;
     box-shadow: 0 0 5px rgba(8, 8, 8, 0.5);
     background-color: red;
+}
+
+.checkers-piece.black {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(8, 8, 8, 0.5);
+    background-color: black;
+}
+
+.checkers-piece.red:focus {
+    outline: none;
 }
