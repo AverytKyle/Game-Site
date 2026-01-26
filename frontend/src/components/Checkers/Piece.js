@@ -1,7 +1,7 @@
 class Piece {
     static idCounter = 0;
 
-    constructor(position, color, boardElement) {
+    constructor(position, color, boardElement, board) {
         this.position = position; // { row: int, col: int }
         this.color = color; // 'red' or 'black'
         this.isKing = false;
@@ -12,6 +12,7 @@ class Piece {
         this.dragging = false;
         this.offsetX = 0;
         this.offsetY = 0;
+        this.board = board;
     }
 
     getColor() {
@@ -24,7 +25,12 @@ class Piece {
     }
 
     move(newPosition) {
+        this.board.board[this.position.row][this.position.col] = null;
+
         this.position = newPosition;
+
+        this.board.board[newPosition.row][newPosition.col] = this;
+        
         this.renderPosition();
     }
 
@@ -85,7 +91,14 @@ class Piece {
                 this.element.offsetTop / this.squareSize
             );
 
-            this.move({ row, col });
+            if (this.board.isValidMove(this, row, col)) {
+                this.move({ row, col });
+            } else {
+                // Revert to original position
+                this.renderPosition();
+            }
+
+            
         });
     }
 }
